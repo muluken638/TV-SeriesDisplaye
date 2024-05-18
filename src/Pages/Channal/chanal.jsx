@@ -12,6 +12,7 @@ import {
   Typography,
 } from '@mui/material';
 import { FaEdit, FaTrash } from 'react-icons/fa';
+import Home from '../../HomePage';
 
 const ChanalPage = () => {
   const [data, setData] = useState([
@@ -42,9 +43,7 @@ const ChanalPage = () => {
 
   return (
   <div>
-
-
-    <Content/>
+<Home/>
     <TableContainer component={Paper}>
       <Table>
         <TableHead>

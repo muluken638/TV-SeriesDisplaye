@@ -6,17 +6,21 @@ import Channel from './Pages/Channal/chanal';
 import SidebarContent from './Pages/Contentes/sidebar';
 import SideBar from './Pages/SideBar/SideBar';
 import MUITable from './Pages/Channal/chanal';
+import Program from './Pages/Program/program';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Home from './HomePage';
 const App = () => {
   return (
-    <Box display="flex" height="100vh">
-      <SideBar />
-      <Box flexGrow={1} display="flex" flexDirection="column" flex={6}>
-        <NavBar/>
-        <Content/>
-      </Box>
-    </Box>
-    //<SidebarContent/>
+    <Router>
+    <Routes>
+      <Route path="/" exact component={Home} />
+      <Route path="/Channel" component={Channel} />
+      <Route path="/Program" component={Program} />
+    </Routes>
+    </Router>
+
+
   );
-};
+}
 
 export default App;

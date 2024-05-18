@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material';
 import { DashboardOutlined, YoutubeSearchedForSharp, Person2TwoTone } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 
 function Drawer() {
@@ -21,23 +22,24 @@ function Drawer() {
      
       <List>
         <ListItem disablePadding>
-          <ListItemButton sx={{ '&:hover': { bgcolor: 'primary.light' } }}>
+          <ListItemButton sx={{ '&:hover': { bgcolor: 'primary.light' } }} Link to="/">
             <ListItemIcon>
               <DashboardOutlined />
             </ListItemIcon>
             <ListItemText primary="Dashboard" />
           </ListItemButton>
         </ListItem>
+        <Link to="/Channel">
         <ListItem disablePadding>
-          <ListItemButton sx={{ '&:hover': { bgcolor: 'primary.light' } }}>
+          <ListItemButton sx={{ '&:hover': { bgcolor: 'primary.light' } }} >
             <ListItemIcon>
               <YoutubeSearchedForSharp/>
             </ListItemIcon>
             <ListItemText primary="Channel" />
           </ListItemButton>
-        </ListItem>
+        </ListItem></Link>
         <ListItem disablePadding>
-          <ListItemButton sx={{ '&:hover': { bgcolor: 'primary.light',fontWeight:'bald' } }} >
+          <ListItemButton sx={{ '&:hover': { bgcolor: 'primary.light',fontWeight:'bald' } }} Link to="/program">
             <ListItemIcon>
               <Person2TwoTone />
             </ListItemIcon>
